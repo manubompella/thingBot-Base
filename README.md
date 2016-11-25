@@ -12,6 +12,7 @@ without any worries.
   * On-board LEDs for RX, TX
   * USB Micro connector (for programming and powering)
   * CP2102 USB to UART Bridge
+  * 3.3V Buck-Boost Converter (TPS63051)
   
 ## Getting Started
 
