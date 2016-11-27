@@ -9,6 +9,12 @@ without any worries.
   * [XBee Compatible Socket](https://www.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Dimensional.pdf)
   * External 2.54mm header for easier connection to peripherals
   * c-JTAG (10 pin Cortex-M connector) for JTAG debugging the TARGET Bot
+<<<<<<< HEAD
+  * On-board LEDs for RX, TX and power indication
+  * USB Micro connector (for ogramming and powering)
+  * CP2102 USB to UART controller
+  * SPDT switch for powering device through USB and battery 
+=======
   * USB Micro connector
   * CP2102 USB to UART Bridge
   * Dual power supply (USB + Li-ion)
@@ -22,6 +28,7 @@ without any worries.
   * CP2102 USB to UART Bridge
   * Ethernet controller for developing edge-router application
   * Dual power supply with battery charging support
+>>>>>>> refs/remotes/automote/master
   
 ## Getting Started
 

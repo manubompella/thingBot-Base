@@ -1,6 +1,10 @@
-update=11/26/2016 7:41:08 PM
+update=22/05/2015 07:44:53
 version=1
 last_client=kicad
+[general]
+version=1
+RootSch=
+BoardNm=
 [pcbnew]
 version=1
 LastNetListRead=
@@ -23,21 +27,9 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=C:/Users/bomma/Documents/GitHub/kicad-libraries/template/thingTronics/worksheet-default.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
-LibDir=../Libraries;../../kicad-libraries/library
+LibDir=
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -68,10 +60,3 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=tps63051
-LibName31=10_pin_JTAG
-LibName32=xbee
-LibName33=switch_dpdt
-LibName34=switch_spdt
-LibName35=xbee_conn_left
-LibName36=xbee_conn_right
