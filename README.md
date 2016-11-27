@@ -1,17 +1,34 @@
 # thingBot-Base
 
-thingBot-Base is a universal baseboard designed to program all the thingBot family of devices and can be used for
-sensor interfacing as well. It can be easily cnnected to existing projects using the baseboard. 
+thingBot-Base is a universal baseboard designed to program all the thingBot family of devices and can be used 
+for peripheral/sensor interfacing as well. Once the thingBots are programmed, Bots can be added to your existing projects
+without any worries. 
 
 ## thingBot-Base v1.0 Features
 
   * [XBee Compatible Socket](https://www.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Dimensional.pdf)
   * External 2.54mm header for easier connection to peripherals
   * c-JTAG (10 pin Cortex-M connector) for JTAG debugging the TARGET Bot
+<<<<<<< HEAD
   * On-board LEDs for RX, TX and power indication
   * USB Micro connector (for ogramming and powering)
   * CP2102 USB to UART controller
   * SPDT switch for powering device through USB and battery 
+=======
+  * USB Micro connector
+  * CP2102 USB to UART Bridge
+  * Dual power supply (USB + Li-ion)
+  
+## thingBot-Base v2.0 Features
+  
+  * [XBee Compatible Socket](https://www.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Dimensional.pdf)
+  * External 2.54mm header for easier connection to peripherals
+  * c-JTAG (10 pin Cortex-M connector) for JTAG debugging the TARGET Bot
+  * USB Micro connector
+  * CP2102 USB to UART Bridge
+  * Ethernet controller for developing edge-router application
+  * Dual power supply with battery charging support
+>>>>>>> refs/remotes/automote/master
   
 ## Getting Started
 
@@ -25,7 +42,7 @@ sensor interfacing as well. It can be easily cnnected to existing projects using
 The thingBot-Base is maintained by thingTronics Innovations.
 
 Main contributor:
- * Manohar @<manohar.bompella@thingtronics.com>
+ * Manohar Bompella @<manohar.bompella@thingtronics.com>
  * Vishnu Sherikar @<vishnu.sherikar@thingtronics.com>
  * Jagadevan V @<jagadevan.vijay@thingtronics.com>
  * Lovelesh Patel @<lovelesh.patel@thingtronics.com>
