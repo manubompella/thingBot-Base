@@ -8,9 +8,10 @@ sensor interfacing as well. It can be easily cnnected to existing projects using
   * [XBee Compatible Socket](https://www.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Dimensional.pdf)
   * External 2.54mm header for easier connection to peripherals
   * c-JTAG (10 pin Cortex-M connector) for JTAG debugging the TARGET Bot
-  * On-board LEDs for RX, TXpr
+  * On-board LEDs for RX, TX and power indication
   * USB Micro connector (for ogramming and powering)
   * CP2102 USB to UART controller
+  * SPDT switch for powering device through USB and battery 
   
 ## Getting Started
 
