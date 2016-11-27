@@ -1,4 +1,4 @@
-update=11/26/2016 7:41:08 PM
+update=11/27/16 17:10:53
 version=1
 last_client=kicad
 [pcbnew]
@@ -75,3 +75,7 @@ LibName33=switch_dpdt
 LibName34=switch_spdt
 LibName35=xbee_conn_left
 LibName36=xbee_conn_right
+LibName37=AMS1117
+LibName38=AMS1117-3V3
+LibName39=cp2102_qfn
+LibName40=PROBE
