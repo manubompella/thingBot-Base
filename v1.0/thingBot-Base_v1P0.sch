@@ -35,6 +35,10 @@ LIBS:switch_dpdt
 LIBS:switch_spdt
 LIBS:xbee_conn_left
 LIBS:xbee_conn_right
+LIBS:AMS1117
+LIBS:AMS1117-3V3
+LIBS:cp2102_qfn
+LIBS:PROBE
 LIBS:thingBot-Base_v1P0-cache
 EELAYER 25 0
 EELAYER END
@@ -46,7 +50,7 @@ Date "2016-11-27"
 Rev "v1.0"
 Comp "thingTronics Innovations Pvt. Ltd."
 Comment1 "Designed By: Manohar Bompella"
-Comment2 "Verified By:"
+Comment2 "Verified By: Lovelesh Patel"
 Comment3 "Approved By:"
 Comment4 ""
 $EndDescr
@@ -201,8 +205,8 @@ F 3 "" H 7950 2950 60  0001 C CNN
 	1    7950 2950
 	1    0    0    -1  
 $EndComp
-Text Notes 7275 4925 0    60   ~ 0
-2x5 1.27 mm MALE TH
+Text Notes 7300 4875 0    60   ~ 0
+2x5 1.27 mm MALE TH\n(Place to the left of the board)
 Text Notes 7275 3750 0    60   ~ 0
 2x5 1.27 mm FEMALE TH\n(Place on Top layer to match\nthe JTAG header position on\nthe thingBot)
 Text Notes 7325 975  0    60   ~ 0
@@ -594,9 +598,9 @@ F 3 "" H 1775 2550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 5875 2625 0    60   ~ 0
-1x10 2.54 mm MALE TH \n(Place on Top layer close to XBEE \nheader)
+1x10 2.54 mm MALE TH \n(Place on Top layer close\nto XBEE header)
 Text Notes 9400 2625 0    60   ~ 0
-1x10 2.54 mm MALE TH \n(Place on Top layer close to XBEE \nheader)
+1x10 2.54 mm MALE TH \n(Place on Top layer close\nto XBEE header)
 Text Label 3700 1450 1    28   ~ 0
 DOUT
 Text Label 3600 1200 1    28   ~ 0
@@ -779,4 +783,18 @@ Wire Notes Line
 	5750 600  5750 625 
 Text Notes 1475 925  0    60   Italic 12
 USB TO SERIAL CONVERTER Section
+$Comp
+L GND #PWR?
+U 1 1 583ADB75
+P 7125 4625
+F 0 "#PWR?" H 7125 4675 30  0001 C CNN
+F 1 "GND" H 7125 4500 30  0001 C CNN
+F 2 "GND" H 7125 4500 60  0000 C CNN
+F 3 "" H 7125 4625 60  0000 C CNN
+	1    7125 4625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7125 4625 7125 4550
+Connection ~ 7125 4550
 $EndSCHEMATC
