@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 126.199999 69.549999 171.800001 122.650001)
     (thickness 1.6)
-    (drawings 45)
+    (drawings 46)
     (tracks 299)
     (zones 0)
     (modules 78)
@@ -2245,6 +2245,9 @@
       (clearance 0.5) (zone_connect 0))
   )
 
+  (gr_text v1.0 (at 137.34 103.5) (layer B.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
+  )
   (dimension 45.501758 (width 0.3) (layer Dwgs.User)
     (gr_text "45.5 mm" (at 148.888874 62.44697 0.503686185) (layer Dwgs.User)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
