@@ -1,0 +1,942 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:tps63051
+LIBS:xbee
+LIBS:switch_dpdt
+LIBS:switch_spdt
+LIBS:PROBE
+LIBS:AMS1117-3V3
+LIBS:cp2102
+LIBS:JTAG
+LIBS:RFM_module
+LIBS:vbus053az
+LIBS:lp5907_ldo_250ma
+LIBS:Micro_USB_B
+LIBS:24MHz
+LIBS:0850bm14e0016
+LIBS:2450BM14G0011
+LIBS:antenna_2.4GHz
+LIBS:cc1310_7x7
+LIBS:cc1310_7x7_new
+LIBS:cc2650
+LIBS:cc2650_7x7
+LIBS:connectors
+LIBS:crystal_24MHz
+LIBS:edge_sma
+LIBS:HM-10
+LIBS:ic-cpu
+LIBS:ic-io
+LIBS:ic-misc
+LIBS:ic-power
+LIBS:inductor
+LIBS:inductor_L
+LIBS:ltr-303als
+LIBS:passive
+LIBS:sfm-110-02-s-d-a-k-tr
+LIBS:si7006
+LIBS:switches
+LIBS:tps782
+LIBS:usb_a_4_pins
+LIBS:usb_a_male_pcb
+LIBS:usb_a_Receptacle 
+LIBS:xbee_Socket_JTag
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "thingBot-Base"
+Date "2016-12-28"
+Rev "v1.1"
+Comp "thingTronics Innovations Pvt. Ltd."
+Comment1 "Designed By: Manohar Bompella"
+Comment2 "Verified By: Lovelesh Patel"
+Comment3 "Approved By:"
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR01
+U 1 1 58383180
+P 2950 3200
+F 0 "#PWR01" H 2950 3250 30  0001 C CNN
+F 1 "GND" H 2950 3075 30  0001 C CNN
+F 2 "GND" H 2950 3050 60  0000 C CNN
+F 3 "" H 2950 3200 60  0000 C CNN
+	1    2950 3200
+	1    0    0    -1  
+$EndComp
+Text GLabel 3550 3500 3    29   Input ~ 0
+RST
+$Comp
+L PROBE U4
+U 1 1 5838C42D
+P 6050 5850
+F 0 "U4" V 6100 6200 60  0001 C CNN
+F 1 "PROBE" H 6100 6000 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x01" H 5950 5850 60  0001 C CNN
+F 3 "" H 5950 5850 60  0001 C CNN
+F 4 "1x2 2.54 mm Header with Jumper" V 6050 5850 60  0001 C CNN "DESC"
+F 5 "*****" V 6050 5850 60  0001 C CNN "MFG_NAME"
+F 6 "*****" V 6050 5850 60  0001 C CNN "MPN"
+	1    6050 5850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 1650 1    29   Input ~ 0
+CTS
+Text GLabel 3800 1650 1    29   Input ~ 0
+RTS
+Text GLabel 3400 1650 1    29   Input ~ 0
+DTR
+$Comp
+L +3V3 #PWR02
+U 1 1 58396F0F
+P 4250 975
+F 0 "#PWR02" H 4250 1200 30  0001 C CNN
+F 1 "+3V3" V 4175 975 30  0001 C CNN
+F 2 "" H 4250 975 60  0000 C CNN
+F 3 "" H 4250 975 60  0000 C CNN
+	1    4250 975 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR03
+U 1 1 583970BB
+P 5600 5675
+F 0 "#PWR03" H 5600 5900 30  0001 C CNN
+F 1 "+3V3" V 5525 5675 30  0001 C CNN
+F 2 "" H 5600 5675 60  0000 C CNN
+F 3 "" H 5600 5675 60  0000 C CNN
+	1    5600 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Led_Small D1
+U 1 1 58397B95
+P 3775 1100
+F 0 "D1" H 3750 1275 50  0000 L CNN
+F 1 "YELLOW" H 3650 1200 50  0000 L CNN
+F 2 "LEDs:LED_0805" V 3775 1100 50  0001 C CNN
+F 3 "" V 3775 1100 50  0000 C CNN
+F 4 "Yellow led for Data Receiving indication" H 3775 1100 60  0001 C CNN "DESC"
+F 5 "Kingbright" H 3775 1100 60  0001 C CNN "MFG_NAME"
+F 6 "AP2012SRCPRV" H 3775 1100 60  0001 C CNN "MPN"
+	1    3775 1100
+	1    0    0    -1  
+$EndComp
+Text Notes 7300 4875 0    60   ~ 0
+2x5 1.27 mm MALE SMT\n(Place to the left of the board)
+Text Notes 7375 3450 0    60   ~ 0
+2x5 1.27 mm FEMALE SMT\n(Place on Top layer to match\nthe JTAG header position on\nthe thingBot)
+Text Notes 7325 975  0    60   ~ 0
+1x10 2.0 mm 2ROWS FEMALE TH \n(Place on Top layer to match the XBEE \nheader position on the thingBot)
+$Comp
+L GND #PWR04
+U 1 1 5839C5CB
+P 7100 2250
+F 0 "#PWR04" H 7100 2300 30  0001 C CNN
+F 1 "GND" H 7100 2125 30  0001 C CNN
+F 2 "GND" H 7100 2125 60  0000 C CNN
+F 3 "" H 7100 2250 60  0000 C CNN
+	1    7100 2250
+	1    0    0    -1  
+$EndComp
+Text Label 9000 1300 0    60   ~ 0
+AD0
+Text Label 6850 1400 0    60   ~ 0
+DOUT
+Text Label 6850 1500 0    60   ~ 0
+DIN
+Text Label 6850 2100 0    60   ~ 0
+DTR
+Text Label 9000 2100 0    60   ~ 0
+CTS
+Text Label 9000 1700 0    60   ~ 0
+RTS
+Text Label 6850 1700 0    60   ~ 0
+RST
+$Comp
+L +5V #PWR05
+U 1 1 583A2FAC
+P 3200 5625
+F 0 "#PWR05" H 3200 5850 30  0001 C CNN
+F 1 "+5V" V 3125 5625 30  0001 C CNN
+F 2 "" H 3200 5625 60  0000 C CNN
+F 3 "" H 3200 5625 60  0000 C CNN
+	1    3200 5625
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R3
+U 1 1 583A3BCF
+P 5600 6250
+F 0 "R3" H 5630 6270 50  0000 L CNN
+F 1 "1K" V 5600 6200 36  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 5600 6250 50  0001 C CNN
+F 3 "" H 5600 6250 50  0000 C CNN
+F 4 "Current Sense Resistors - SMD 0805 0.002ohm 1% AEC-Q200" H 5600 6250 60  0001 C CNN "DESC"
+F 5 "ROHM Semiconductor" H 5600 6250 60  0001 C CNN "MFG_NAME"
+F 6 "PMR10EZPFV2L00" H 5600 6250 60  0001 C CNN "MPN"
+	1    5600 6250
+	1    0    0    -1  
+$EndComp
+Text Notes 4500 5300 0    60   Italic 12
+POWER SECTION
+$Comp
+L SWITCH_SPDT SW1
+U 1 1 583AC786
+P 3750 5800
+F 0 "SW1" H 3750 5975 60  0000 C CNN
+F 1 "ON/OFF_Switch" H 3825 5550 59  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPDT_PCM12" H 3750 5800 60  0001 C CNN
+F 3 "" H 3750 5800 60  0001 C CNN
+F 4 "Mini ON/OFF type switch rated at 50VDC@300mA" H 3750 5800 60  0001 C CNN "DESC"
+F 5 "sunrom" H 3750 5800 60  0001 C CNN "MFG_NAME"
+F 6 "4273" H 3750 5800 60  0001 C CNN "MPN"
+	1    3750 5800
+	-1   0    0    1   
+$EndComp
+NoConn ~ 3000 2300
+NoConn ~ 3000 2400
+NoConn ~ 3500 1800
+Text Notes 3275 5700 0    60   Italic 12
+USB\n
+Text Notes 3250 5900 0    60   Italic 12
+BATT\n
+$Comp
+L GND #PWR06
+U 1 1 583B5AEB
+P 3350 6425
+F 0 "#PWR06" H 3350 6475 30  0001 C CNN
+F 1 "GND" H 3350 6300 30  0001 C CNN
+F 2 "GND" H 3350 6275 60  0000 C CNN
+F 3 "" H 3350 6425 60  0000 C CNN
+	1    3350 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P2
+U 1 1 583B5E85
+P 3150 6200
+F 0 "P2" H 3150 6350 50  0000 C CNN
+F 1 "BATT_CONN" V 3250 6200 50  0000 C CNN
+F 2 "Connectors_JST:JST_EH_B02B-EH-A_02x2.50mm_Straight" H 3150 6200 50  0001 C CNN
+F 3 "" H 3150 6200 50  0000 C CNN
+F 4 "JST_XH_S02B-XH-A_02x2.54mm_Angled" H 3150 6200 60  0001 C CNN "DESC"
+F 5 "*******" H 3150 6200 60  0001 C CNN "MFG_NAME"
+F 6 "******" H 3150 6200 60  0001 C CNN "MPN"
+	1    3150 6200
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR07
+U 1 1 583997BA
+P 1550 3250
+F 0 "#PWR07" H 1550 3475 30  0001 C CNN
+F 1 "+5V" V 1475 3250 30  0001 C CNN
+F 2 "" H 1550 3250 60  0000 C CNN
+F 3 "" H 1550 3250 60  0000 C CNN
+	1    1550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 58382B72
+P 1700 2550
+F 0 "#PWR08" H 1700 2600 30  0001 C CNN
+F 1 "GND" H 1700 2425 30  0001 C CNN
+F 2 "" H 1700 2550 60  0000 C CNN
+F 3 "" H 1700 2550 60  0000 C CNN
+	1    1700 2550
+	1    0    0    -1  
+$EndComp
+Text Notes 5875 2625 0    60   ~ 0
+1x10 2.54 mm MALE TH \n(Place on Top layer close\nto XBEE header)
+Text Notes 9400 2625 0    60   ~ 0
+1x10 2.54 mm MALE TH \n(Place on Top layer close\nto XBEE header)
+Text Label 3700 1450 1    28   ~ 0
+DOUT
+Text Label 3600 1200 1    28   ~ 0
+DIN
+$Comp
+L GND #PWR09
+U 1 1 583B1182
+P 2075 3475
+F 0 "#PWR09" H 2075 3525 30  0001 C CNN
+F 1 "GND" H 2075 3350 30  0001 C CNN
+F 2 "GND" H 2075 3325 60  0000 C CNN
+F 3 "" H 2075 3475 60  0000 C CNN
+	1    2075 3475
+	1    0    0    -1  
+$EndComp
+Text GLabel 2900 2800 0    60   Input ~ 0
+VDD
+Text GLabel 1200 3425 1    60   Input ~ 0
+VDD
+$Comp
+L GND #PWR010
+U 1 1 583B3928
+P 1200 3850
+F 0 "#PWR010" H 1200 3900 30  0001 C CNN
+F 1 "GND" H 1200 3725 30  0001 C CNN
+F 2 "GND" H 1200 3700 60  0000 C CNN
+F 3 "" H 1200 3850 60  0000 C CNN
+	1    1200 3850
+	1    0    0    -1  
+$EndComp
+Text Notes 1475 925  0    60   Italic 12
+USB TO SERIAL CONVERTER Section
+$Comp
+L GND #PWR011
+U 1 1 583ADB75
+P 7175 4650
+F 0 "#PWR011" H 7175 4700 30  0001 C CNN
+F 1 "GND" H 7175 4525 30  0001 C CNN
+F 2 "GND" H 7175 4525 60  0000 C CNN
+F 3 "" H 7175 4650 60  0000 C CNN
+	1    7175 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L XBEE_CONN_LEFT P3
+U 1 1 583C1812
+P 6275 1750
+F 0 "P3" H 6275 2300 50  0000 C CNN
+F 1 "XBEE_CONN_LEFT" V 5925 1750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x10" H 6275 1750 50  0001 C CNN
+F 3 "" H 6275 1750 50  0000 C CNN
+F 4 "1X10 2.54 mm Male TH" H 6275 1750 60  0001 C CNN "DESC"
+F 5 "Worth Elektronic" H 6275 1750 60  0001 C CNN "MFG_NAME"
+F 6 "61300211121" H 6275 1750 60  0001 C CNN "MPN"
+	1    6275 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L XBEE_CONN_RIGHT P8
+U 1 1 583C1C99
+P 9575 1750
+F 0 "P8" H 9575 2300 50  0000 C CNN
+F 1 "XBEE_CONN_RIGHT" V 10075 1750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x10" H 9575 1750 50  0001 C CNN
+F 3 "" H 9575 1750 50  0000 C CNN
+F 4 "1X10 2.54 mm Male TH" H 9575 1750 60  0001 C CNN "DESC"
+F 5 "Worth Elekronik" H 9575 1750 60  0001 C CNN "MFG_NAME"
+F 6 "61300211121" H 9575 1750 60  0001 C CNN "MPN"
+	1    9575 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L JTAG P6
+U 1 1 583C39A7
+P 7925 4300
+F 0 "P6" H 7875 4200 60  0000 C CNN
+F 1 "JTAG" H 7675 4600 60  0000 C CNN
+F 2 "pin_header:Pin_Header_Straight_SMT_02x05_1.27mm_Pitch" H 7925 4300 60  0001 C CNN
+F 3 "" H 7925 4300 60  0001 C CNN
+F 4 "Pin_Header_Straight_SMT_02x05_1.27mm_Pitch male" H 7925 4300 60  0001 C CNN "DESC"
+F 5 "Harwin" H 7925 4300 60  0001 C CNN "MFG_NAME"
+F 6 "M50-3601042R" H 7925 4300 60  0001 C CNN "MPN"
+	1    7925 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP2102 U2
+U 1 1 583C4A15
+P 3700 2650
+F 0 "U2" H 3700 2750 60  0000 C CNN
+F 1 "CP2102" H 3675 3600 60  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-28-1EP_5x5mm_Pitch0.5mm" H 3700 2650 60  0001 C CNN
+F 3 "" H 3700 2650 60  0001 C CNN
+F 4 "Single-Chip USB to UART Data Transfer" H 3700 2650 60  0001 C CNN "DESC"
+F 5 "Silicon Labs" H 3700 2650 60  0001 C CNN "MFG_NAME"
+F 6 "CP2102-GM" H 3700 2650 60  0001 C CNN "MPN"
+	1    3700 2650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3850 3400
+NoConn ~ 3750 3400
+Text Notes 5675 5425 0    60   ~ 0
+1x2 2.54 mm Header \nwith jumper
+Text GLabel 7200 4025 1    29   Input ~ 0
+VXBEE_3V3
+Text GLabel 6625 5725 1    29   Input ~ 0
+VXBEE_3V3
+Text GLabel 7175 1225 1    29   Input ~ 0
+VXBEE_3V3
+$Comp
+L C_Small C1
+U 1 1 58531758
+P 1200 3600
+F 0 "C1" H 1210 3670 50  0000 L CNN
+F 1 "0.1uF" H 1210 3520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1200 3600 50  0001 C CNN
+F 3 "" H 1200 3600 50  0000 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 10K pF 16V 10%" H 1200 3600 60  0001 C CNN "DESC"
+F 5 "Yageo" H 1200 3600 60  0001 C CNN "MFG_NAME"
+F 6 "AC0805KRX7R9BB103" H 1200 3600 60  0001 C CNN "MPN"
+	1    1200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 58531D96
+P 2950 3050
+F 0 "C2" H 2960 3120 50  0000 L CNN
+F 1 "1uF" H 2960 2970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2950 3050 50  0001 C CNN
+F 3 "" H 2950 3050 50  0000 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 10K pF 16V 10%" H 2950 3050 60  0001 C CNN "DESC"
+F 5 "Yageo" H 2950 3050 60  0001 C CNN "MFG_NAME"
+F 6 "AC0805KRX7R9BB103" H 2950 3050 60  0001 C CNN "MPN"
+	1    2950 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Led_Small D2
+U 1 1 585327B2
+P 3850 1325
+F 0 "D2" H 3825 1500 50  0000 L CNN
+F 1 "YELLOW" H 3725 1425 50  0000 L CNN
+F 2 "LEDs:LED_0805" V 3850 1325 50  0001 C CNN
+F 3 "" V 3850 1325 50  0000 C CNN
+F 4 "Yellow led for Data Transmition indication" H 3850 1325 60  0001 C CNN "DESC"
+F 5 "Kingbright" H 3850 1325 60  0001 C CNN "MFG_NAME"
+F 6 "AP2012SRCPRV" H 3850 1325 60  0001 C CNN "MPN"
+	1    3850 1325
+	1    0    0    -1  
+$EndComp
+$Comp
+L XBEE P7
+U 1 1 58464931
+P 8100 1700
+F 0 "P7" H 8000 1550 60  0000 C CNN
+F 1 "XBEE" H 7600 2250 60  0000 C CNN
+F 2 "Xbee:XBee_Plug" H 8000 1550 60  0001 C CNN
+F 3 "" H 8000 1550 60  0001 C CNN
+F 4 "Xbee Socket with 2x05 SMT Female 1.27mm_Pitch Header" H 8100 1700 60  0001 C CNN "DESC"
+F 5 "*****" H 8100 1700 60  0001 C CNN "MFG_NAME"
+F 6 "*****" H 8100 1700 60  0001 C CNN "MPN"
+	1    8100 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R1
+U 1 1 585792BE
+P 4050 1100
+F 0 "R1" V 3975 1075 50  0000 L CNN
+F 1 "1K" V 4050 1050 36  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4050 1100 50  0001 C CNN
+F 3 "" H 4050 1100 50  0000 C CNN
+F 4 "Current Sense Resistors - SMD 0805 0.002ohm 1% AEC-Q200" H 4050 1100 60  0001 C CNN "DESC"
+F 5 "ROHM Semiconductor" H 4050 1100 60  0001 C CNN "MFG_NAME"
+F 6 "PMR10EZPFV2L00" H 4050 1100 60  0001 C CNN "MPN"
+	1    4050 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R2
+U 1 1 58579B7D
+P 4100 1325
+F 0 "R2" V 4025 1300 50  0000 L CNN
+F 1 "1K" V 4100 1275 36  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4100 1325 50  0001 C CNN
+F 3 "" H 4100 1325 50  0000 C CNN
+F 4 "Current Sense Resistors - SMD 0805 0.002ohm 1% AEC-Q200" H 4100 1325 60  0001 C CNN "DESC"
+F 5 "ROHM Semiconductor" H 4100 1325 60  0001 C CNN "MFG_NAME"
+F 6 "PMR10EZPFV2L00" H 4100 1325 60  0001 C CNN "MPN"
+	1    4100 1325
+	0    1    1    0   
+$EndComp
+$Comp
+L +3V3 #PWR012
+U 1 1 585D01C7
+P 7625 5725
+F 0 "#PWR012" H 7625 5950 30  0001 C CNN
+F 1 "+3V3" V 7550 5725 30  0001 C CNN
+F 2 "" H 7625 5725 60  0000 C CNN
+F 3 "" H 7625 5725 60  0000 C CNN
+	1    7625 5725
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 585D05CE
+P 7625 6000
+F 0 "#PWR013" H 7625 6050 30  0001 C CNN
+F 1 "GND" H 7625 5875 30  0001 C CNN
+F 2 "GND" H 7625 5850 60  0000 C CNN
+F 3 "" H 7625 6000 60  0000 C CNN
+	1    7625 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P5
+U 1 1 585D0603
+P 7875 5850
+F 0 "P5" H 7875 6000 50  0000 C CNN
+F 1 "CONN_01X02" V 7975 5850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7875 5850 50  0001 C CNN
+F 3 "" H 7875 5850 50  0000 C CNN
+	1    7875 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P4
+U 1 1 585D0FD4
+P 7375 5850
+F 0 "P4" H 7375 6000 50  0000 C CNN
+F 1 "CONN_01X02" V 7475 5850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7375 5850 50  0001 C CNN
+F 3 "" H 7375 5850 50  0000 C CNN
+	1    7375 5850
+	-1   0    0    -1  
+$EndComp
+Text Notes 7150 5400 0    60   Italic 12
+PHERIPERAL Section
+NoConn ~ 1700 2700
+Wire Wire Line
+	1700 2800 2000 2800
+Wire Wire Line
+	1700 2900 2275 2900
+Wire Wire Line
+	3550 3400 3550 3500
+Wire Wire Line
+	1300 2500 3000 2500
+Wire Wire Line
+	6675 1300 7250 1300
+Wire Wire Line
+	3600 1100 3600 1800
+Wire Wire Line
+	3700 1325 3700 1800
+Wire Wire Line
+	6675 1500 7250 1500
+Wire Wire Line
+	3400 1800 3400 1650
+Wire Wire Line
+	3800 1800 3800 1650
+Wire Wire Line
+	3900 1800 3900 1650
+Wire Wire Line
+	3600 1100 3675 1100
+Wire Wire Line
+	3700 1325 3750 1325
+Wire Wire Line
+	4250 975  4250 1325
+Wire Wire Line
+	4250 1100 4150 1100
+Wire Wire Line
+	3950 1100 3875 1100
+Wire Wire Line
+	3950 1325 4000 1325
+Wire Wire Line
+	4250 1325 4200 1325
+Connection ~ 4250 1100
+Wire Wire Line
+	6675 2200 7250 2200
+Wire Wire Line
+	6675 2100 7250 2100
+Wire Wire Line
+	7250 1600 6675 1600
+Wire Wire Line
+	7250 1700 6675 1700
+Wire Wire Line
+	7250 1800 6675 1800
+Wire Wire Line
+	7250 1900 6675 1900
+Wire Wire Line
+	7250 2000 6675 2000
+Wire Wire Line
+	7175 1225 7175 1300
+Wire Wire Line
+	8800 1300 9375 1300
+Wire Wire Line
+	8800 1400 9375 1400
+Wire Wire Line
+	8800 1500 9375 1500
+Wire Wire Line
+	8800 1600 9375 1600
+Wire Wire Line
+	8800 1700 9375 1700
+Wire Wire Line
+	8800 1800 9375 1800
+Wire Wire Line
+	8800 1900 9375 1900
+Wire Wire Line
+	8800 2000 9375 2000
+Wire Wire Line
+	8800 2100 9375 2100
+Wire Wire Line
+	8800 2200 9375 2200
+Connection ~ 7100 2200
+Connection ~ 7175 1300
+Wire Wire Line
+	6675 1400 7250 1400
+Wire Wire Line
+	7100 2600 7100 4150
+Wire Wire Line
+	7100 4150 7225 4150
+Wire Wire Line
+	7000 2700 7000 4250
+Wire Wire Line
+	7000 4250 7225 4250
+Wire Wire Line
+	6900 2800 6900 4350
+Wire Wire Line
+	6900 4350 7225 4350
+Wire Wire Line
+	6700 3000 6700 4550
+Wire Wire Line
+	6700 4550 7225 4550
+Wire Wire Line
+	8800 2600 8800 4150
+Wire Wire Line
+	8800 4150 8575 4150
+Wire Wire Line
+	8900 2700 8900 4250
+Wire Wire Line
+	8900 4250 8575 4250
+Wire Wire Line
+	9000 2800 9000 4350
+Wire Wire Line
+	9000 4350 8575 4350
+Wire Wire Line
+	9100 2900 9100 4450
+Wire Wire Line
+	9100 4450 8575 4450
+Wire Wire Line
+	9200 3000 9200 4550
+Wire Wire Line
+	9200 4550 8575 4550
+Wire Wire Line
+	6625 5800 6550 5800
+Wire Notes Line
+	2825 5150 6700 5150
+Wire Notes Line
+	6700 5150 6700 6575
+Wire Wire Line
+	3350 5700 3200 5700
+Wire Wire Line
+	3200 5700 3200 5625
+Wire Wire Line
+	3350 6250 3350 6425
+Wire Wire Line
+	3350 5900 3350 6150
+Wire Notes Line
+	6700 6800 6700 6550
+Wire Notes Line
+	2825 6800 6700 6800
+Connection ~ 1700 2500
+Wire Wire Line
+	2600 3000 2600 2900
+Wire Wire Line
+	2600 2900 3000 2900
+Wire Wire Line
+	2950 2950 2950 2900
+Connection ~ 2950 2900
+Wire Wire Line
+	2950 3150 2950 3200
+Wire Wire Line
+	2725 2900 2725 3400
+Wire Wire Line
+	2725 3400 3450 3400
+Connection ~ 2725 2900
+Wire Wire Line
+	1775 3000 1775 3250
+Wire Wire Line
+	1775 3250 1550 3250
+Connection ~ 1775 3000
+Wire Wire Line
+	7100 2250 7100 2200
+Wire Wire Line
+	3000 2800 2900 2800
+Wire Wire Line
+	1200 3425 1200 3500
+Wire Wire Line
+	1200 3850 1200 3700
+Wire Notes Line
+	2825 6800 2825 5150
+Wire Notes Line
+	800  625  4675 625 
+Wire Notes Line
+	4675 625  4675 4800
+Wire Notes Line
+	800  625  800  4800
+Wire Notes Line
+	5600 600  11025 600 
+Wire Notes Line
+	11025 600  11025 5000
+Wire Notes Line
+	11025 5000 5600 5000
+Connection ~ 7175 4550
+Wire Wire Line
+	7175 4250 7175 4650
+Wire Wire Line
+	7100 2600 7300 2600
+Wire Wire Line
+	7000 2700 7300 2700
+Wire Wire Line
+	6900 2800 7300 2800
+Wire Wire Line
+	6700 3000 7300 3000
+Wire Wire Line
+	8800 2600 8700 2600
+Wire Wire Line
+	9000 2800 8700 2800
+Wire Wire Line
+	9100 2900 8700 2900
+Wire Wire Line
+	9200 3000 8700 3000
+Wire Wire Line
+	8900 2700 8700 2700
+Wire Notes Line
+	800  4800 4675 4800
+Wire Wire Line
+	7200 4150 7200 4025
+Connection ~ 7200 4150
+Wire Wire Line
+	6625 5800 6625 5725
+Wire Wire Line
+	7625 5800 7625 5725
+Wire Wire Line
+	7625 5900 7625 6000
+Wire Wire Line
+	7575 5900 7675 5900
+Connection ~ 7625 5900
+Wire Wire Line
+	7575 5800 7675 5800
+Connection ~ 7625 5800
+Wire Notes Line
+	6875 5175 8350 5175
+Wire Notes Line
+	8350 5175 8350 6425
+Wire Notes Line
+	8350 6425 6875 6425
+Wire Notes Line
+	6875 6425 6875 5175
+Connection ~ 7175 4350
+Connection ~ 7175 4250
+Wire Wire Line
+	1700 2500 1700 2550
+$Comp
+L C C3
+U 1 1 58609CA5
+P 4500 6050
+F 0 "C3" H 4525 6150 50  0000 L CNN
+F 1 "1uF" H 4525 5950 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4538 5900 50  0001 C CNN
+F 3 "" H 4500 6050 50  0000 C CNN
+	1    4500 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5800 4500 5800
+$Comp
+L LP5907_LDO_250mA U3
+U 1 1 5860AEE3
+P 5000 5450
+F 0 "U3" H 4900 5300 60  0000 C CNN
+F 1 "LP5907_LDO_250mA" H 4824 5842 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 4816 5220 60  0001 C CNN
+F 3 "" H 4916 5320 60  0001 C CNN
+F 4 "SOT-23-5 250mA_250mV-dropout" H 4880 5726 60  0001 C CNN "DESC"
+F 5 "Texas Instrumens" H 4980 5826 60  0001 C CNN "MFG_NAME"
+F 6 "LP5907MFX-3.3/NOPB" H 5080 5926 60  0001 C CNN "MPN"
+	1    5000 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5600 4500 5900
+Connection ~ 4500 5800
+$Comp
+L GND #PWR014
+U 1 1 5860C230
+P 4950 6350
+F 0 "#PWR014" H 4950 6400 30  0001 C CNN
+F 1 "GND" H 4950 6225 30  0001 C CNN
+F 2 "GND" H 4950 6200 60  0000 C CNN
+F 3 "" H 4950 6350 60  0000 C CNN
+	1    4950 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Led_Small D3
+U 1 1 58532CB2
+P 5600 6000
+F 0 "D3" H 5650 6050 50  0000 L CNN
+F 1 "POWER" H 5500 5900 50  0000 L CNN
+F 2 "LEDs:LED_0805" V 5600 6000 50  0001 C CNN
+F 3 "" V 5600 6000 50  0000 C CNN
+F 4 "GREEN led for power indication" H 5600 6000 60  0001 C CNN "DESC"
+F 5 "Kingbright" H 5600 6000 60  0001 C CNN "MFG_NAME"
+F 6 "AP2012SRCPRV" H 5600 6000 60  0001 C CNN "MPN"
+	1    5600 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C4
+U 1 1 5860D512
+P 5375 6050
+F 0 "C4" H 5275 5950 50  0000 L CNN
+F 1 "1uF" H 5400 5950 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 5413 5900 50  0001 C CNN
+F 3 "" H 5375 6050 50  0000 C CNN
+	1    5375 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 5800 5700 5800
+Wire Wire Line
+	5375 5800 5375 5900
+Wire Wire Line
+	5600 5675 5600 5900
+Connection ~ 5375 5800
+Connection ~ 5600 5800
+Wire Wire Line
+	5600 6100 5600 6150
+Wire Wire Line
+	4500 6200 4500 6350
+Wire Wire Line
+	4500 6350 5600 6350
+Wire Wire Line
+	5375 6200 5375 6350
+Connection ~ 5375 6350
+Wire Wire Line
+	4950 6350 4950 6000
+Connection ~ 4950 6350
+Wire Notes Line
+	5600 5000 5600 600 
+Wire Wire Line
+	3300 1750 3300 1800
+Wire Wire Line
+	3125 1750 3300 1750
+$Comp
+L GND #PWR015
+U 1 1 5860C4B6
+P 3125 1750
+F 0 "#PWR015" H 3125 1800 30  0001 C CNN
+F 1 "GND" H 3125 1625 30  0001 C CNN
+F 2 "GND" H 3125 1600 60  0000 C CNN
+F 3 "" H 3125 1750 60  0000 C CNN
+	1    3125 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2800 2000 2600
+Wire Wire Line
+	2275 2900 2275 2700
+Wire Wire Line
+	1925 2800 1925 3125
+Connection ~ 1925 2800
+$Comp
+L R_Small R4
+U 1 1 5861109E
+P 2175 2600
+F 0 "R4" V 2250 2600 50  0000 L CNN
+F 1 "27E" V 2125 2375 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 2175 2600 50  0001 C CNN
+F 3 "" H 2175 2600 50  0000 C CNN
+	1    2175 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R5
+U 1 1 58611528
+P 2450 2700
+F 0 "R5" V 2525 2775 50  0000 L CNN
+F 1 "27E" V 2525 2575 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 2450 2700 50  0001 C CNN
+F 3 "" H 2450 2700 50  0000 C CNN
+	1    2450 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 2600 2075 2600
+Wire Wire Line
+	2275 2600 3000 2600
+Wire Wire Line
+	2550 2700 3000 2700
+Wire Wire Line
+	2275 2700 2350 2700
+Wire Wire Line
+	1700 3000 2600 3000
+$Comp
+L C_Small C5
+U 1 1 5861263A
+P 1925 3225
+F 0 "C5" H 1935 3295 50  0000 L CNN
+F 1 "47pF" H 1935 3145 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1925 3225 50  0001 C CNN
+F 3 "" H 1925 3225 50  0000 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 10K pF 16V 10%" H 1925 3225 60  0001 C CNN "DESC"
+F 5 "Yageo" H 1925 3225 60  0001 C CNN "MFG_NAME"
+F 6 "AC0805KRX7R9BB103" H 1925 3225 60  0001 C CNN "MPN"
+	1    1925 3225
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C6
+U 1 1 58613410
+P 2250 3225
+F 0 "C6" H 2260 3295 50  0000 L CNN
+F 1 "47pF" H 2260 3145 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2250 3225 50  0001 C CNN
+F 3 "" H 2250 3225 50  0000 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 10K pF 16V 10%" H 2250 3225 60  0001 C CNN "DESC"
+F 5 "Yageo" H 2250 3225 60  0001 C CNN "MFG_NAME"
+F 6 "AC0805KRX7R9BB103" H 2250 3225 60  0001 C CNN "MPN"
+	1    2250 3225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2900 2250 3125
+Connection ~ 2250 2900
+Wire Wire Line
+	1925 3325 1925 3425
+Wire Wire Line
+	1925 3425 2250 3425
+Wire Wire Line
+	2250 3425 2250 3325
+Wire Wire Line
+	2075 3425 2075 3475
+Connection ~ 2075 3425
+Text Notes 3425 6250 0    60   ~ 0
+JST Connector\nSTRAIGHT\n
+$Comp
+L Micro_usb_B P1
+U 1 1 5863771C
+P 1400 2800
+F 0 "P1" H 1600 2600 50  0000 C CNN
+F 1 "Micro_usb_B" H 1350 3000 50  0000 C CNN
+F 2 "Connect:USB_Micro-B" V 1350 2700 50  0001 C CNN
+F 3 "" V 1350 2700 50  0000 C CNN
+	1    1400 2800
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
